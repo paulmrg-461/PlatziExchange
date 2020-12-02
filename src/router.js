@@ -2,21 +2,27 @@ import { createWebHistory, createRouter } from 'vue-router'
 import Home from '@/views/Home'
 import About from '@/views/About'
 import Error from '@/views/Error'
+import CoinDetail from '@/views/CoinDetail'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     component: About
   },
   {
+    path: '/coin/:id',
+    name: 'coin-detail',
+    component: CoinDetail
+  },
+  {
     path: '/:catchAll(.*)',
-    name: 'Error',
+    name: 'error',
     component: Error
   }
 ]
